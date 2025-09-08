@@ -1,0 +1,46 @@
+# Security - Never commit these files
+service-account-key.json
+*.json
+!package.json
+!package-lock.json
+!vertex_ai_config.json
+
+# Environment files
+.env
+.env.local
+.env.production
+*.key
+*.pem
+
+# Google Cloud credentials
+google-application-credentials.json
+gcp-key.json
+service-account*.json
+
+# Node modules
+node_modules/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/

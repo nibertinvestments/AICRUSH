@@ -1,194 +1,289 @@
 # 🤖 AICRUSH - AI Coding Assistant
 
-**An AI coding assistant project focused on becoming a reliable, accurate code generation tool.**
-
 [![Security](https://img.shields.io/badge/Security-Enabled-green)](./SECURITY.md)
 [![Cloud](https://img.shields.io/badge/Google_Cloud-Active-blue)](https://cloud.google.com)
 [![Status](https://img.shields.io/badge/Status-Development-yellow)](https://github.com/nibertinvestments/AICRUSH)
+[![License](https://img.shields.io/badge/License-Private-red)](./LICENSE)
+[![Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
----
+> **A practical AI coding assistant focused on reliable, accurate code generation across multiple programming languages.**
 
-## 📍 **Current Project Status**
+AICRUSH is designed to be a dependable development tool that generates production-ready code, emphasizing accuracy and real-world applicability over flashy features. Built with enterprise-grade security and scalable cloud infrastructure.
 
-### **✅ What We Have Built**
-- **Secure Development Environment**: Repository with comprehensive security protections
-- **Google Cloud Infrastructure**: L4 GPU service deployed and operational
-- **Training Data Collection**: 87,457 files stored in Google Cloud Storage
-- **Development Pipeline**: Python-based data processing and collection scripts
-- **Cloud Deployment**: Auto-scaling Cloud Run service ($66-145/month, scales to zero)
+## 📋 Table of Contents
 
-### **🏗️ Current Infrastructure**
+- [Features](#features)
+- [Project Status](#project-status)
+- [Architecture](#architecture)
+- [Quick Start](#quick-start)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Security](#security)
+- [License](#license)
+- [Support](#support)
+
+## ✨ Features
+
+### Current Capabilities
+- **🔒 Enterprise Security**: Comprehensive security framework with secret scanning and access controls
+- **☁️ Cloud-Native Infrastructure**: Auto-scaling Google Cloud deployment with GPU acceleration
+- **📊 Data Processing Pipeline**: Automated collection and processing of training data (87,457+ files)
+- **🚀 Production-Ready Deployment**: Containerized services with zero-downtime scaling
+- **📈 Cost-Optimized**: Smart scaling from $66-145/month with scale-to-zero capability
+
+### Planned Features
+- **🤖 Multi-Language Code Generation**: Python, JavaScript, SQL, and more
+- **🎯 Context-Aware Suggestions**: Smart code completion based on project context
+- **🔄 Continuous Learning**: Model improvement through real-world usage feedback
+- **🌐 API Integration**: RESTful API for integration with development tools
+
+## 📍 Project Status
+
+### ✅ **Completed Milestones**
+- **✅ Secure Development Environment**: Repository with comprehensive security protections
+- **✅ Google Cloud Infrastructure**: L4 GPU service deployed and operational  
+- **✅ Training Data Collection**: 87,457+ files stored in Google Cloud Storage
+- **✅ Development Pipeline**: Python-based data processing and collection scripts
+- **✅ Cloud Deployment**: Auto-scaling Cloud Run service with monitoring
+
+### 🔄 **Current Phase: Data Collection & Processing**
+- **Data Quality**: Implementing advanced filtering and validation
+- **Model Architecture**: Designing training pipeline for code generation
+- **Infrastructure Optimization**: Performance tuning and cost optimization
+
+### 📋 **Next Phase: Model Training** 
+- Model architecture finalization
+- Training pipeline development
+- Validation and benchmarking
+- Initial deployment testing
+
+## 🏗️ Architecture
+
+### **Cloud Infrastructure Overview**
 ```
 Production Environment:
-├── Google Cloud Project: gen-lang-client-0311226580
-├── Cloud Run Service: ai-gpu-service-east-249675450204.us-east4.run.app
-├── Storage Bucket: ai-storage-bucket-6658 (87,457 files)
-├── GPU Resources: NVIDIA L4 (us-east4 region)
-└── Auto-scaling: Enabled with zero-downtime scaling
+├── 🌐 Google Cloud Project: gen-lang-client-0311226580
+├── 🚀 Cloud Run Service: ai-gpu-service-east-249675450204.us-east4.run.app
+├── 💾 Storage Bucket: ai-storage-bucket-6658 (87,457+ files)
+├── 🎯 GPU Resources: NVIDIA L4 (us-east4 region)
+├── 📊 Auto-scaling: Enabled with zero-downtime scaling
+└── 🔍 Monitoring: Cloud Operations Suite integration
 ```
 
-### **📂 Repository Structure**
+### **Technology Stack**
+- **Backend**: Python 3.8+, FastAPI, asyncio
+- **Cloud Platform**: Google Cloud Platform (GCP)
+- **Compute**: Cloud Run with GPU acceleration
+- **Storage**: Google Cloud Storage for training data
+- **Containerization**: Docker with multi-stage builds
+- **Monitoring**: Google Cloud Operations Suite
+- **Security**: IAM, secret management, audit logging
+
+### **Repository Structure**
 ```
 AICRUSH/
-├── coding-agent/           # Core AI development scripts
-│   ├── real_data_collector.py    # Data collection from real sources
-│   ├── data_processor.py         # Training data preprocessing
-│   ├── library_uploader.py       # Cloud storage management
-│   ├── requirements.txt          # Python dependencies
-│   └── Dockerfile               # Container deployment config
-├── .env                    # Environment configuration (secure)
-├── .gitignore             # Security-first git protection
-├── SECURITY.md            # Security documentation
-└── QUICK_START.md         # Development setup guide
+├── 📁 docs/                     # Comprehensive documentation
+│   ├── api/                    # API documentation  
+│   ├── architecture/          # System design documentation
+│   ├── deployment/            # Deployment guides
+│   └── guides/                # User and developer guides
+├── 📁 src/                     # Source code (future)
+│   ├── data_processing/       # Data collection and processing
+│   ├── training/              # Model training scripts  
+│   └── deployment/            # Deployment configurations
+├── 📁 tests/                   # Test suites (future)
+├── 📁 scripts/                 # Utility scripts (future)
+├── 🔒 .env                     # Environment configuration (gitignored)
+├── 🔒 .gitignore              # Security-first git protection
+├── 📄 SECURITY.md             # Security documentation
+├── 📄 QUICK_START.md          # Development setup guide
+├── 📄 CONTRIBUTING.md         # Contribution guidelines
+├── 📄 CODE_OF_CONDUCT.md      # Community standards
+└── 📄 Copilot-instructions.md # Development guidelines
 ```
 
----
-
-## 🎯 **Project Goals**
-
-### **Primary Objective**
-Build a **reliable AI coding assistant** that generates accurate, production-ready code across multiple programming languages.
-
-### **What We're NOT Trying to Build**
-- ❌ General-purpose AGI
-- ❌ Revolutionary breakthrough AI
-- ❌ Space-age technology with impossible promises
-- ❌ Marketing hype or unrealistic claims
-
-### **What We ARE Building**
-- ✅ **Practical Code Generation**: Reliable, syntactically correct code
-- ✅ **Multi-Language Support**: Python, JavaScript, SQL, and more
-- ✅ **Real-World Solutions**: Code that actually works in production
-- ✅ **Quality Focus**: Emphasis on accuracy over flashy features
-- ✅ **Incremental Improvement**: Steady, measurable progress
-
----
-
-## 🔧 **Development Status**
-
-### **Infrastructure: Complete ✅**
-- Google Cloud environment fully operational
-- Secure development practices implemented
-- Training data collection pipeline active
-- Cloud deployment ready for model serving
-
-### **Data Collection: In Progress 🔄**
-- **87,457 training files** already collected
-- Real-world code examples from multiple sources
-- Data processing pipeline operational
-- Quality filtering and validation ongoing
-
-### **Model Training: Next Phase 📋**
-- Training infrastructure ready
-- GPU resources allocated (NVIDIA L4)
-- Training scripts in development
-- Model architecture planning phase
-
-### **Deployment: Ready 🚀**
-- Cloud Run service operational
-- Auto-scaling configured
-- API endpoints prepared
-- Monitoring and logging in place
-
----
-
-## 🛠️ **Getting Started**
+## 🚀 Quick Start
 
 ### **Prerequisites**
-- Python 3.8+
-- Google Cloud access
-- VS Code (recommended)
+- **Python 3.8+** with pip
+- **Google Cloud SDK** configured
+- **Docker** (for containerized development)
+- **VS Code** (recommended IDE)
 
-### **Quick Setup**
-```bash
-# Clone the repository
-git clone https://github.com/nibertinvestments/AICRUSH.git
-cd AICRUSH
+### **Installation**
 
-# Set up environment
-cp .env.template .env
-# (Add your API keys to .env)
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/nibertinvestments/AICRUSH.git
+   cd AICRUSH
+   ```
 
-# Install dependencies
-cd coding-agent
-pip install -r requirements.txt
+2. **Environment Setup**
+   ```bash
+   # Copy environment template
+   cp .env.template .env
+   # Add your configuration to .env (never commit this file)
+   ```
 
-# Test connection
-python ../test_env.py
-```
+3. **Install Dependencies**
+   ```bash
+   # Create virtual environment
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   
+   # Install dependencies (when available)
+   pip install -r requirements.txt
+   ```
+
+4. **Verify Setup**
+   ```bash
+   # Test Google Cloud connection
+   gcloud auth application-default login
+   gcloud config set project gen-lang-client-0311226580
+   
+   # Verify environment
+   python test_env.py  # (when available)
+   ```
 
 ### **Development Environment**
-- **Cloud Resources**: All infrastructure is cloud-based
-- **Local Development**: VS Code connected to Google Cloud
-- **Security**: All credentials protected by .gitignore
-- **Testing**: Environment validation scripts included
+- **☁️ Cloud Resources**: All infrastructure is cloud-based
+- **💻 Local Development**: VS Code with Google Cloud integration  
+- **🔒 Security**: All credentials protected by .gitignore
+- **🧪 Testing**: Environment validation scripts included
 
----
+For detailed setup instructions, see our [Quick Start Guide](QUICK_START.md).
 
-## 📊 **Current Metrics**
+## 📚 Documentation
 
-| Metric | Status |
-|--------|--------|
-| Training Data | 87,457 files collected |
-| Cloud Infrastructure | 100% operational |
-| Security Compliance | ✅ Implemented |
-| Development Environment | ✅ Ready |
-| GPU Resources | NVIDIA L4 allocated |
-| Monthly Cost | $66-145 (auto-scaling) |
+### **Core Documentation**
+- **[Quick Start Guide](QUICK_START.md)** - Get up and running quickly
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project
+- **[Security Policy](SECURITY.md)** - Security guidelines and reporting
+- **[Code of Conduct](CODE_OF_CONDUCT.md)** - Community standards
+- **[Copilot Instructions](Copilot-instructions.md)** - Development guidelines
 
----
+### **Technical Documentation**
+- **[API Documentation](docs/api/)** - API reference and examples
+- **[Architecture Guide](docs/architecture/)** - System design and decisions
+- **[Deployment Guide](docs/deployment/)** - Deployment instructions and best practices
 
-## 🗺️ **Roadmap**
+### **Additional Resources**
+- **[Development Guides](docs/guides/)** - Detailed development tutorials
+- **Google Cloud Console**: [Project Dashboard](https://console.cloud.google.com/home/dashboard?project=gen-lang-client-0311226580)
 
-### **Phase 1: Foundation (Current)**
-- ✅ Infrastructure setup
-- ✅ Security implementation
-- ✅ Data collection pipeline
-- 🔄 Data quality improvement
+## 🤝 Contributing
 
-### **Phase 2: Model Development (Next 2-3 months)**
+We welcome contributions from developers who share our vision of building practical, reliable AI coding tools.
+
+### **How to Contribute**
+1. **Read** our [Contributing Guide](CONTRIBUTING.md)
+2. **Follow** our [Code of Conduct](CODE_OF_CONDUCT.md)  
+3. **Review** our [Copilot Instructions](Copilot-instructions.md)
+4. **Submit** pull requests with clear descriptions
+
+### **Contribution Areas**
+- 🐛 **Bug Fixes**: Improve reliability and fix issues
+- ✨ **Features**: Add new functionality aligned with project goals
+- 📚 **Documentation**: Improve guides, tutorials, and API docs
+- 🧪 **Testing**: Expand test coverage and quality assurance
+- 🔒 **Security**: Enhance security measures and practices
+
+### **Development Standards**
+- **Quality First**: Well-tested, documented code
+- **Security Focus**: All contributions must maintain security standards  
+- **Practical Solutions**: Code that solves real-world problems
+- **Incremental Progress**: Small, tested improvements over large changes
+
+For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 🔒 Security
+
+Security is a top priority for AICRUSH. We implement comprehensive security measures across all aspects of the project.
+
+### **Security Measures**
+- **🔐 Secret Management**: No credentials in code, proper secret scanning
+- **🛡️ Access Control**: IAM-based permissions with least privilege
+- **📊 Audit Logging**: Comprehensive logging of all system activities
+- **🔍 Vulnerability Scanning**: Regular security assessments
+- **🚨 Incident Response**: Defined procedures for security incidents
+
+### **Reporting Security Issues**
+For security concerns, please email [josh@nibertinvestments.com](mailto:josh@nibertinvestments.com) directly. 
+
+For detailed security information, see our [Security Policy](SECURITY.md).
+
+## 📊 Current Metrics
+
+| Metric | Status | Details |
+|--------|--------|---------|
+| 📈 Training Data | 87,457+ files | Continuously growing dataset |
+| ☁️ Cloud Infrastructure | 100% operational | Auto-scaling, high availability |
+| 🔒 Security Compliance | ✅ Implemented | Secret scanning, access controls |
+| 🚀 Development Environment | ✅ Ready | VS Code, Docker, GCP integration |
+| 🎯 GPU Resources | NVIDIA L4 allocated | us-east4 region, on-demand scaling |
+| 💰 Monthly Cost | $66-145 | Auto-scaling with cost optimization |
+
+## 🗺️ Roadmap
+
+### **Phase 1: Foundation ✅ (Completed)**
+- ✅ Infrastructure setup and deployment
+- ✅ Security framework implementation  
+- ✅ Data collection pipeline development
+- ✅ Development environment configuration
+
+### **Phase 2: Data & Training 🔄 (Current - Q4 2024)**
+- 🔄 Data quality improvement and validation
 - 📋 Training pipeline optimization
-- 📋 Initial model training
-- 📋 Validation and testing
-- 📋 Performance benchmarking
+- 📋 Initial model training and validation
+- 📋 Performance benchmarking and testing
 
-### **Phase 3: Production (Q1 2025)**
-- 📋 Model deployment
-- 📋 API development
-- 📋 User interface
-- 📋 Performance optimization
+### **Phase 3: Production Deployment 📋 (Q1 2025)**
+- 📋 Production model deployment
+- 📋 API development and documentation
+- 📋 User interface and developer tools
+- 📋 Performance optimization and scaling
 
-### **Phase 4: Enhancement (Ongoing)**
+### **Phase 4: Enhancement & Scaling 📋 (Q2 2025+)**
 - 📋 Multi-language support expansion
-- 📋 Code quality improvements
+- 📋 Advanced code quality features
 - 📋 User feedback integration
 - 📋 Continuous model improvement
 
+For detailed roadmap information, see [docs/guides/roadmap.md](docs/guides/).
+
+## 📄 License
+
+**Private Development Project** - All rights reserved.
+
+This is a proprietary project under development. Unauthorized copying, distribution, or use is strictly prohibited.
+
+## 📞 Support
+
+### **Getting Help**
+- **📋 Issues**: [GitHub Issues](https://github.com/nibertinvestments/AICRUSH/issues) for bug reports and feature requests
+- **💬 Discussions**: [GitHub Discussions](https://github.com/nibertinvestments/AICRUSH/discussions) for questions and ideas
+- **📧 Email**: [josh@nibertinvestments.com](mailto:josh@nibertinvestments.com) for direct contact
+
+### **Project Information**
+- **🏠 Repository**: [nibertinvestments/AICRUSH](https://github.com/nibertinvestments/AICRUSH)
+- **📊 Project Board**: [GitHub Projects](https://github.com/nibertinvestments/AICRUSH/projects)
+- **🌐 Status**: Active Development
+- **🎯 Focus**: Practical AI coding assistance
+
+### **Community**
+- **📖 Documentation**: [docs/](docs/) directory
+- **🤝 Contributing**: [CONTRIBUTING.md](CONTRIBUTING.md)
+- **📋 Code of Conduct**: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
 ---
 
-## 🤝 **Contributing**
+<div align="center">
 
-This is currently a private development project. We focus on:
+**🤖 AICRUSH - Building the future of AI-assisted coding**
 
-1. **Code Quality**: Every contribution must be production-ready
-2. **Security First**: All code undergoes security review
-3. **Incremental Progress**: Small, tested improvements over large changes
-4. **Real-World Focus**: Solutions must solve actual coding problems
+*Practical • Reliable • Secure*
 
----
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/nibertinvestments/AICRUSH)
+[![Built for Developers](https://img.shields.io/badge/Built%20for-Developers-blue.svg)](https://github.com/nibertinvestments/AICRUSH)
 
-## 📄 **License**
-
-Private development project - All rights reserved.
-
----
-
-## 📞 **Contact**
-
-- **Repository**: [nibertinvestments/AICRUSH](https://github.com/nibertinvestments/AICRUSH)
-- **Status**: Active Development
-- **Focus**: Practical AI coding assistance
-
----
-
-**Built with reliability and practical application in mind.**
+</div>
